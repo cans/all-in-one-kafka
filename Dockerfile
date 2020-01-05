@@ -19,4 +19,6 @@ RUN apk add --no-cache bash                                                     
 
 COPY ./scripts /etc/services.d/
 
+# Expose kafka and zookeeper ports
+EXPOSE 9092/tcp 2181/tcp
 ENTRYPOINT [ "/init" ]
